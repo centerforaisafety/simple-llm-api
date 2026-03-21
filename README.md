@@ -1,6 +1,6 @@
 # simple-llm-api
 
-Lightweight, two-file LLM API wrapper with built-in token tracking, cost calculation, and async support. Supports OpenAI, Anthropic, Google Gemini, xAI Grok, and any OpenAI-compatible endpoint (DeepSeek, OpenRouter, LiteLLM, vLLM, etc.) through a unified interface.
+Simple LLM API scripts using OpenAI SDK with built-in token tracking, cost calculation, and async support.
 
 ## Installation
 
