@@ -1,0 +1,85 @@
+claude-opus-4-6-adaptive-64k:
+  model: anthropic/claude-opus-4-6
+  generation_config:
+    max_tokens: 64000
+    use_cache: false
+    vertexai: false
+    thinking:
+      type: adaptive
+
+claude-opus-4-6:
+  model: anthropic/claude-opus-4-6
+  generation_config:
+    use_cache: false # set true for multi-turn evals (default: false)
+    vertexai: false
+
+claude-opus-4-6-cache:
+  model: anthropic/claude-opus-4-6
+  generation_config:
+    use_cache: true # set true for multi-turn evals (default: false)
+    vertexai: false
+
+claude-sonnet-4-6:
+  model: anthropic/claude-sonnet-4-6
+  generation_config:
+    use_cache: false
+    vertexai: false
+    
+deepseek-v3.2:
+  model: openai/deepseek-reasoner
+  generation_config:
+    api_key_env: DEEPSEEK_API_KEY
+    api_base_url: https://api.deepseek.com
+    provider: deepseek
+
+kimi-k2.5:
+  model: openai/kimi-k2.5
+  generation_config:
+    api_key_env: MOONSHOT_API_KEY
+    api_base_url: https://api.moonshot.ai/v1
+    provider: moonshot
+
+gemini-3.1-pro-preview:
+  model: gemini/gemini-3.1-pro-preview
+
+gemini-3-flash-preview:
+  model: gemini/gemini-3-flash-preview
+
+grok-4-1-fast:
+  model: xai/grok-4-1-fast-reasoning
+
+grok-4-2:
+  model: xai/grok-4.20-beta-0309-reasoning
+
+gpt-5.4:
+  model: openai/gpt-5.4
+
+gemini-3.1-flash-lite:
+  model: gemini/gemini-3.1-flash-lite-preview
+
+qwen3.5-397b:
+  model: openai/qwen/qwen3.5-397b-a17b
+  generation_config:
+    api_key_env: OPENROUTER_API_KEY
+    api_base_url: https://openrouter.ai/api/v1
+
+glm-5:
+  model: gemini/zai-org/glm-5-maas
+  generation_config:
+    vertexai: true
+
+gpt-5.4-mini:
+  model: openai/gpt-5.4-mini
+
+gpt-5.4-mini-high:
+  model: openai/gpt-5.4-mini
+  generation_config:
+    reasoning_effort: high
+
+gpt-5.4-mini-xhigh:
+  model: openai/gpt-5.4-mini
+  generation_config:
+    reasoning_effort: xhigh
+
+gpt-5.4-nano:
+  model: openai/gpt-5.4-nano

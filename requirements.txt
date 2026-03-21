@@ -1,0 +1,7 @@
+openai
+anthropic
+pydantic
+litellm
+python-dotenv
+pyyaml
+requests
