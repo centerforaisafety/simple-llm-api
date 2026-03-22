@@ -24,7 +24,7 @@ except Exception as e:
 
 from dotenv import load_dotenv
 load_dotenv()
-TIMEOUT=600
+TIMEOUT=3600
 
 def get_llm_agent_class(model: str, generation_config: dict = {}, **kwargs):
   provider, model_name = model.split("/", 1)
