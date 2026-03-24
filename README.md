@@ -179,6 +179,8 @@ class LLMResponse(BaseModel):
       pbar.set_postfix({"acc": f"{accuracy:.1f}%", "cost": f"${cost:.3f}"})
   ```
 
+- **Never set `temperature`, `top_p`, or `max_tokens` without confirming with the user.** Best practice is to use the default values from the API provider. Different models (especially reasoning models) have strict constraints — e.g., some only allow `temperature=1` and reject `top_p`. Setting these parameters unnecessarily can cause silent failures or API errors. Only override defaults when the user explicitly requests it.
+
 - **Anthropic prompt caching requires explicit opt-in** (`use_cache: true`). Anthropic does NOT enable caching by default — it must be explicitly configured per model. Before setting `use_cache`, confirm with the human developer whether caching is appropriate for their use case:
   - `use_cache: true` — recommended for long context + multi-turn evals (e.g., agentic coding, interactive games) where the same prefix is reused across turns
   - `use_cache: false` — recommended for single-turn evals or when each request has unique content
